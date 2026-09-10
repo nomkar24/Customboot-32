@@ -121,23 +121,7 @@ The firmware transfer is carried out via **UART**.
 │   └── 8. Wireless_Firmware_Selection_ESP_STM(Additional)
 ├── Documentation  #Detailed documentation of the project
 │   └── Final_DOC.pdf
-├── Gerber files  #Files made for fabrication of PCB
-│   ├── 4 SRA-B_Cu.gbr
-│   ├── 4 SRA-B_Mask.gbr
-│   ├── 4 SRA-B_Paste.gbr
-│   ├── 4 SRA-B_Silkscreen.gbr
-│   ├── 4 SRA-drlnew.zip
-│   ├── 4 SRA-drl.rpt
-│   ├── 4 SRA-Edge_Cuts.gbr
-│   ├── 4 SRA-F_Cu.gbr
-│   ├── 4 SRA-F_Mask.gbr
-│   ├── 4 SRA-F_Paste.gbr
-│   ├── 4 SRA-F_Silkscreen.gbr
-│   ├── 4 SRA-job.gbrjob
-│   ├── 4 SRA-NPTH-drl.gbr
-│   ├── 4 SRA-NPTH-drl_map.gbr
-│   ├── 4 SRA-PTH-drl.gbr
-│   └── 4 SRA-PTH-drl_map.gbr
+├── Gerber files  #Files made for fabrication of PCB  
 ├── README.md
 └── Schematic files  #Schematics of our PCB
     ├── 4 SRA.kicad_pcb
