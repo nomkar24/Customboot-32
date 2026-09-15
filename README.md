@@ -1,21 +1,17 @@
-<h1 align="center">🚀 CustomBoot-32</h1>
+<h1 align="center">CustomBoot-32</h1>
 
+<h2 align="center">SRA Eklavya 2025</h2>
 
-<h2 align="center">✨ SRA Eklavya 2025</h2>
-
-
-
-## 📑 Table of Contents
-* [About the Project](#-about-the-project)  
+## Table of Contents
+* [About the Project](#about-the-project)  
   - [Aim](#aim)  
   - [Description](#description)  
   - [Tech-Stack](#tech-stack)  
   - [File Structure](#file-structure)  
 * [Getting Started](#getting-started)  
-  * [Installation](#installation)  
+  - [Installation](#installation)  
 * [Usage](#usage)  
-* [Results and Demo](#results-and-demo)  
-* [Future Work](#future-work)  
+* [Results and Demo](#results)  
 * [Report](#report)
 * [Troubleshooting](#troubleshooting)  
 * [Contributors](#contributors)  
@@ -25,7 +21,7 @@
 
 ---
 
-# ⭐ About the Project
+# About the Project
 
 ## Aim
 Designing a custom PCB with OTA support and a dual-image Bootloader using ESP32 WROOM-32E and STM32F103C8T6.
@@ -38,102 +34,65 @@ On the STM side, a dual-image Bootloader requests firmware based on user input, 
 The firmware transfer is carried out via **UART**.
 
 ## Tech-Stack
-### Coding Language
-<div style="display:flex; align-items:center; margin-bottom:8px;">
-  <img src="assets/EmbedC.png" width="50" style="margin-right:8px;">
-  <span style="background:#ff6f3c; color:white; padding:4px 10px; border-radius:4px; font-weight:bold;">
-    Embedded C
-  </span>
-</div>
+
+### Languages & Frameworks
+![Embedded C](https://img.shields.io/badge/Language-Embedded_C-FF6F3C?style=for-the-badge&logo=c&logoColor=white)
+![ESP-IDF](https://img.shields.io/badge/Framework-ESP--IDF-E7352C?style=for-the-badge&logo=espressif&logoColor=white)
+
+### Libraries & Tools
+![STM32 HAL](https://img.shields.io/badge/Library-STM32_HAL-00599C?style=for-the-badge&logo=stmicroelectronics&logoColor=white)
+![LibOpenCM3](https://img.shields.io/badge/Library-LibOpenCM3-410099?style=for-the-badge&logo=c&logoColor=white)
+![KiCad](https://img.shields.io/badge/Hardware-KiCad-314CB6?style=for-the-badge&logo=kicad&logoColor=white)
+
+### Protocols & File System
+![UART](https://img.shields.io/badge/Protocol-UART-333333?style=for-the-badge)
+![OTA Updates](https://img.shields.io/badge/Protocol-OTA_Updates-E7352C?style=for-the-badge&logo=espressif&logoColor=white)
+![SPIFFS](https://img.shields.io/badge/File_System-SPIFFS-FF6F3C?style=for-the-badge)
 
 
-### Libraries
-<div style="display:flex; align-items:center; margin-bottom:8px;">
-  <img src="assets/HAL.png" width="35" style="margin-right:8px;">
-  <span style="background:#ff6f3c; color:white; padding:4px 10px; border-radius:4px; font-weight:bold;">
-    HAL
-  </span>
-</div>
-
-<div style="display:flex; align-items:center; margin-bottom:8px;">
-  <img src="assets/LibOpenCM3.png" width="35" style="margin-right:8px;">
-  <span style="background:#ff6f3c; color:white; padding:4px 10px; border-radius:4px; font-weight:bold;">
-    LibOpenCM3
-  </span>
-</div>
-
-
-### File Protocol
-<div style="display:flex; align-items:center; margin-bottom:8px;">
-  <img src="assets/SPIFFS.png" width="50" style="margin-right:8px;">
-  <span style="background:#ff6f3c; color:white; padding:4px 10px; border-radius:4px; font-weight:bold;">
-    SPIFFS
-  </span>
-</div>
-
-### Communication Protocols
-<div style="display:flex; align-items:center; margin-bottom:8px;">
-  <img src="assets/UART.png" width="60" style="margin-right:8px;">
-  <span style="background:#ff6f3c; color:white; padding:4px 10px; border-radius:4px; font-weight:bold;">
-    UART
-  </span>
-</div>
-<div style="display:flex; align-items:center; margin-bottom:8px;">
-  <img src="assets/OTA.png" width="30" style="margin-right:8px;">
-  <span style="background:#ff6f3c; color:white; padding:4px 10px; border-radius:4px; font-weight:bold;">
-    OTA
-  </span>
-</div>
-<br><br>
-
-<br><br>
-
-## 📁 File Structure
+## File Structure
 
 ```
 .
-├── assets  #All images and test videos
-│   ├── 2WayUART.mp4
-│   ├── 3D-view back.png
-│   ├── 3D-view.png
-│   ├── EmbedC.png
-│   ├── Final_PCB.png
-│   ├── HAL.png
-│   ├── LibOpenCM3.png
-│   ├── OTA.png
-│   ├── PCBSC1.png
-│   ├── PCBSC2.png
-│   ├── Routing.png
-│   ├── SimpleBootloader.mp4
-│   ├── SPIFFS.png
-│   ├── UART.png
-│   ├── website.png
-│   ├── Wireless_CMD_Test.mp4
-│   └── WorkingVideo.mp4
-├── CustomBoot-32  #All the firmwares for both ESP as well as STM
-│   ├── 1. OTA
-│   ├── 2. Dual_Image_Bootloader
-│   ├── 3. ESP_STM_UART1
-│   ├── 4. ESP_STM_UART2
-│   ├── 5. ESP_TO_STM_FIRMWARE_VIA_UART
-│   ├── 6. ESP_STM_FILE_CRC
-│   ├── 7. Controling_ESP_GPIO_Wirelessly
-│   └── 8. Wireless_Firmware_Selection_ESP_STM(Additional)
-├── Documentation  #Detailed documentation of the project
-│   └── Final_DOC.pdf
-├── Gerber files  #Files made for fabrication of PCB  
+├── assets  # All images and test videos
+│   ├── 2WayUART.mp4
+│   ├── 3D-view back.png
+│   ├── 3D-view.png
+│   ├── EmbedC.png
+│   ├── Final_PCB.png
+│   ├── HAL.png
+│   ├── LibOpenCM3.png
+│   ├── OTA.png
+│   ├── PCBSC1.png
+│   ├── PCBSC2.png
+│   ├── Routing.png
+│   ├── SimpleBootloader.mp4
+│   ├── SPIFFS.png
+│   ├── UART.png
+│   ├── website.png
+│   ├── Wireless_CMD_Test.mp4
+│   └── WorkingVideo.mp4
+├── CustomBoot-32  # All the firmwares for both ESP as well as STM
+│   ├── 1. OTA
+│   ├── 2. Dual_Image_Bootloader
+│   ├── 3. ESP_STM_UART1
+│   ├── 4. ESP_STM_UART2
+│   ├── 5. ESP_TO_STM_FIRMWARE_VIA_UART
+│   ├── 6. ESP_STM_FILE_CRC
+│   ├── 7. Controling_ESP_GPIO_Wirelessly
+│   └── 8. Wireless_Firmware_Selection_ESP_STM(Additional)
+├── Documentation  # Detailed documentation of the project
+│   └── Final_DOC.pdf
+├── Gerber files  # Files made for fabrication of PCB  
 ├── README.md
-└── Schematic files  #Schematics of our PCB
+└── Schematic files  # Schematics of our PCB
     ├── 4 SRA.kicad_pcb
-    ├── 4 SRA.kicad_sch
-    └── untitled.kicad_sch
-
-
+    └── 4 SRA.kicad_sch
 ```
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Installation
 1. Clone the repo  
@@ -149,170 +108,143 @@ The firmware transfer is carried out via **UART**.
 
 ## Usage
 
-The codes used in our project are in the 'CustomBoot-32' directory. 
+The codes used in our project are in the `CustomBoot-32` directory. 
 
 ### 1. OTA
 
-- From the CustomBoot-32 directory head to the OTA directory.
-```
-cd 1. OTA
+- From the `CustomBoot-32` directory, navigate to the `OTA` directory:
+```bash
+cd CustomBoot-32/1.\ OTA
 ```
 
-- In the code enter the SSID and password of your wifi in line 16 and 17.
-```
+- In the code, set your Wi-Fi SSID and password (lines 16-17):
+```c
 #define WIFI_SSID "Your_SSID"
 #define WIFI_PASS "Your_Password"
 ```
 
-- Then open ESP-IDF Powershell and build the project.
-```
+- Build using ESP-IDF PowerShell:
+```bash
 idf.py fullclean
 idf.py build
 ```
 
-- After the build is complete flash it.
-```
+- Flash and open the serial monitor:
+```bash
 idf.py flash monitor 
 ```
 
 ### 2. Dual_Image_Bootloader
 
-- To generate the bin files open this project in STM32CubeIDE and build it 
-
-- To flash this Code use STM32CubeProgrammer. Change your directory to Dual image bootloader directory. 
-
-- After opening the directory first flash the LED_BLINK_2 bin file into STM-32 at the Start Address '0x08006000'. The path for the bin is: 
-```
-CustomBoot-32/2. Dual_Image_Bootloader/LED_BLINK_2/Debug/LED_BLINK_2.bin
-```
-
-- After flashing the first bin file flash the LED_BLINK bin file into STM-32 at the Start Address '0x08004000'. The path for the bin is:
-```
-CustomBoot-32/2. Dual_Image_Bootloader/LED_BLINK/Debug/LED_BLINK.bin
-```
-
-- Lastly, flash the Bootloader at the Start Address '0x08000000'. The path for the bin is:
-```
-CustomBoot-32/2. Dual_Image_Bootloader/Learning_Bootloader/Debug/Learning_Bootloader.bin
-```
-
-- Press the 'Start Programming' button to run the program.
+- To generate the binary files, open this project in STM32CubeIDE and build it.
+- To flash this code, use STM32CubeProgrammer:
+  1. Flash `LED_BLINK_2.bin` at start address `0x08006000`:
+     `CustomBoot-32/2. Dual_Image_Bootloader/LED_BLINK_2/Debug/LED_BLINK_2.bin`
+  2. Flash `LED_BLINK.bin` at start address `0x08004000`:
+     `CustomBoot-32/2. Dual_Image_Bootloader/LED_BLINK/Debug/LED_BLINK.bin`
+  3. Flash the Bootloader at start address `0x08000000`:
+     `CustomBoot-32/2. Dual_Image_Bootloader/Learning_Bootloader/Debug/Learning_Bootloader.bin`
+- Click **Start Programming** to run.
 
 ### 3. ESP_STM_UART1
 
-- To run the ESP side of the code change your directory to 'ESP_STM_COMM'.
-```
-cd 3. ESP_STM_UART1\ESP_STM_COMM
-```
-
-- After that build the code and flash it 
-```
+- For the ESP32 code:
+```bash
+cd CustomBoot-32/3.\ ESP_STM_UART1/ESP_STM_COMM
 idf.py fullclean
 idf.py build
 idf.py flash monitor 
 ```
 
-- To flash the STM code, open STM32CubeIDE and generate the build files.
-
-- After generating flash the bin file into the STM using STM32CubeProgrammer at Start Address '0x08000000'
+- For the STM32 code, generate build files in STM32CubeIDE and flash the binary using STM32CubeProgrammer at address `0x08000000`.
 
 ### 4. ESP_STM_UART2
 
-- To run the ESP side of the code change your directory to 'ESP_STM_COMM'.
-```
-cd 3. ESP_STM_UART2\ESP_STM_COMM
-```
-
-- After that build the code and flash it 
-```
+- For the ESP32 code:
+```bash
+cd CustomBoot-32/4.\ ESP_STM_UART2/ESP_STM_COMM
 idf.py fullclean
 idf.py build
 idf.py flash monitor 
 ```
 
-- To flash the STM code, open STM32CubeIDE and generate the build files.
-
-- After generating flash the bin file into the STM using STM32CubeProgrammer at Start Address '0x08000000'.
+- For the STM32 code, generate build files in STM32CubeIDE and flash the binary using STM32CubeProgrammer at address `0x08000000`.
 
 ### 5. ESP_TO_STM_FIRMWARE_VIA_UART
 
--- To run the ESP side of the code change your directory to 'OTA'.
-```
-cd 5. ESP_TO_STM_FIRMWARE_VIA_UART\OTA
-```
-
-- After that build the code and flash it 
-```
+- For the ESP32 code:
+```bash
+cd CustomBoot-32/5.\ ESP_TO_STM_FIRMWARE_VIA_UART/OTA
 idf.py build
 idf.py flash monitor 
 ```
- 
 
-- To flash the STM code, open STM32CubeIDE and generate the build files. You will find the bin files in the path
-```
-CustomBoot-32/5. ESP_TO_STM_FIRMWARE_VIA_UART/Learning_Bootloader/Debug/Learning_Bootloader.bin
-```
+- For the STM32 code, build in STM32CubeIDE and flash the binary found at `CustomBoot-32/5. ESP_TO_STM_FIRMWARE_VIA_UART/Learning_Bootloader/Debug/Learning_Bootloader.bin` at address `0x08000000`.
 
-- After generating flash the bin file into the STM using STM32CubeProgrammer at Start Address '0x08000000'.
+### 6. ESP_STM_FILE_CRC
 
-### 6. ESP_STM_FILE CRC
-
-- Download libopencm3 by cloning it to run bootloader file
-```
+- Clone `libopencm3` required for the bootloader:
+```bash
 git clone https://github.com/libopencm3/libopencm3.git
 cd libopencm3
 ```
-- After that flash the ESP32 in the directory
-```
+
+- Flash the ESP32 firmware:
+```bash
+cd CustomBoot-32/6.\ ESP_STM_FILE_CRC/OTA
 idf.py fullclean
-CustomBoot-32/6. ESP_STM_FILE_CRC/OTA
 idf.py build flash monitor
 ```
 
-### 7. Controling_ESP_GPIO_Wirelessly
-- Firstly fullclean, then build and flash the project.
-```
+### 7. Controlling_ESP_GPIO_Wirelessly
+
+- Clean, build, and flash:
+```bash
+cd CustomBoot-32/7.\ Controling_ESP_GPIO_Wirelessly
 idf.py fullclean
 idf.py build
 idf.py flash monitor
 ```
 
 ### 8. Wireless_Firmware_Selection
-- Download libopencm3 by cloning it to run bootloader file
-```
+
+- Clone `libopencm3` required for the bootloader:
+```bash
 git clone https://github.com/libopencm3/libopencm3.git
 cd libopencm3
 ```
-- After that flash the ESP32 in the directory
-```
+
+- Flash the ESP32 firmware:
+```bash
+cd CustomBoot-32/8.\ Wireless_Firmware_Selection_ESP_STM\(Additional\)/OTA
 idf.py fullclean
-CustomBoot-32/8. Wireless_Firmware_Selection_ESP_STM(Additional)/OTA
 idf.py build flash monitor
 ```
 
+---
 
+## Results
 
+**Custom PCB Views:**  
 
-## 📸 Results
-
-**Screenshot of our custom PCB:**  
-
-|            Front            |            Back            |
-| --------------------------- | -------------------------- |
+| Front | Back |
+| ----- | ---- |
 | ![Front](assets/PCBSC1.png) | ![Back](assets/PCBSC2.png) |
-
 
 <img src="assets/Final_PCB.png" alt="Actual PCB" width="800">
 
-## Demo:  
-[Working Demo of final PCB](https://drive.google.com/file/d/1Z0VfDI0KjEA28zM6vQ-hMSaG2jekwzWR/view?usp=drive_link)  
+## Demo
 
-For other results and test videos, please check our [Google Drive](https://drive.google.com/drive/folders/1JogM4m4yME66ZIJGMlyX8mcmxp7ndMSk?usp=drive_link).
+[Working Demo of Final PCB](https://drive.google.com/file/d/1Z0VfDI0KjEA28zM6vQ-hMSaG2jekwzWR/view?usp=drive_link)  
+
+For other results and test videos, check the [Google Drive Folder](https://drive.google.com/file/d/1JogM4m4yME66ZIJGMlyX8mcmxp7ndMSk?usp=drive_link).
 
 ## Report
-Refer our own [report](https://drive.google.com/file/d/13CS2zIfVXfLGR-wP4OjCv9lpuOwN3wu8/view?usp=drive_link) of project where we explain the entire process in detail.
 
-## 🛠 Troubleshooting
+Refer to the detailed project [Report](https://drive.google.com/file/d/13CS2zIfVXfLGR-wP4OjCv9lpuOwN3wu8/view?usp=drive_link).
+
+## Troubleshooting
+
 * ERC rule check errors in PCB schematics.  
 * Routing issues in compact areas while adhering to manufacturer constraints.  
 * Wi-Fi SSID and password options not appearing in Menuconfig.  
@@ -331,19 +263,21 @@ Refer our own [report](https://drive.google.com/file/d/13CS2zIfVXfLGR-wP4OjCv9lp
 
 ---
 
-## 👥 Contributors
+## Contributors
+
 * [Varun Patil](https://github.com/varun05050505)  
 * [Omkar Nanajkar](https://github.com/nomkar24)  
 * [Archit More](https://github.com/avm1234567)  
 
-## 🎓 Mentors
+## Mentors
+
 * [Prithvi Tambewagh](https://github.com/rkt-1597)  
 * [Shaunak Datar](https://github.com/ShaunakKDatar)  
 * [Vishal Mutha](https://github.com/Vishal-Mutha)  
 
 ---
 
-## 📚 Resources
+## Resources
 
 - [Bootloader basics (EmbeTronicx)](https://embetronicx.com/tutorials/microcontrollers/stm32/bootloader/bootloader-basics/)  
 - [EmbeddedInventor: Bootloader](https://embeddedinventor.com/embedded-bootloader-and-booting-process-explained/)  
@@ -359,7 +293,8 @@ Refer our own [report](https://drive.google.com/file/d/13CS2zIfVXfLGR-wP4OjCv9lp
 
 ---
 
-## 🙏 Acknowledgements
+## Acknowledgements
+
 We are extremely grateful to our mentors – **Prithvi Tambewagh, Shaunak Datar, and Vishal Mutha** – for their guidance and support throughout the course of this project.  
 
 We also thank [SRA-VJTI](https://sravjti.in/) for their support in organizing [Eklavya 2025](https://sravjti.in/projects/eklavya/) and for providing us the opportunity to work on this project.  
